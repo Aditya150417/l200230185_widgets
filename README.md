@@ -1,66 +1,76 @@
-# Tugas Mandiri - Pertemuan 7 (Flutter Widgets)
+# 📱 Implementasi Common Widgets - Pemrograman Perangkat Mobile
 
-Aplikasi Flutter ini dikembangkan untuk memenuhi tugas mata kuliah **Pemrograman Perangkat Mobile** (Pertemuan 7) mengenai eksplorasi dan implementasi berbagai *Common Widgets* dasar hingga lanjutan di Flutter.
+Repositori ini memuat *source code* aplikasi Flutter yang dikembangkan sebagai bentuk penyelesaian **Tugas Mandiri Pertemuan 7** pada mata kuliah Pemrograman Perangkat Mobile. Fokus utama dari proyek ini adalah implementasi dan eksplorasi fungsionalitas *Common Widgets* secara komprehensif, responsif, dan dinamis.
 
-## 👤 Informasi Mahasiswa
-- **Nama:** Aditya
-- **NIM:** L200230185
-- **Program Studi:** Informatika
-
-## 🚀 Fitur dan Implementasi Tugas
-
-Aplikasi dirancang dengan *UI/UX* yang elegan menggunakan tema **Slate 900 (Professional Dark Navy)** secara seragam dan konsisten pada semua halaman. Berikut rincian implementasi tugas:
-
-### 1. AppBar Lengkap (Tugas No. 2)
-- Terdapat komponen `Leading` (menu laci/sidebar).
-- `Title` aplikasi yang tebal dan jelas.
-- Menggunakan minimal 2 `Actions` (tombol *Search* yang interaktif dan tombol Notifikasi).
-
-### 2. BoxDecoration (Tugas No. 3)
-- Memanfaatkan berbagai properti dari `BoxDecoration` seperti `color`, `border`, `borderRadius` pada seluruh sudut maupun sudut tertentu saja (`only`).
-- Menggabungkan variasi efek bayangan dengan `boxShadow` (berbagai macam *blur radius*, *spread*, dan *offset*).
-- Implementasi pewarnaan modern menggunakan `LinearGradient`.
-
-### 3. RichText (Tugas No. 4)
-- Menampilkan berbagai gaya teks dengan `RichText` dan `TextSpan`.
-- Dalam **satu baris** kalimat, terdapat lebih dari 3 gaya berbeda, seperti modifikasi ukuran *font* (besar/kecil), pewarnaan beda, *bold*, *italic*, teks yang dicoret (*strikethrough*), teks dengan *underline*, warna *highlight*, hingga teks berbayang (*shadow*).
-
-### 4. Form & Validasi (Tugas No. 5)
-- Terdapat halaman formulir pendaftaran yang responsif.
-- Menggunakan 3 buah `TextFormField` untuk *input* (Nama Lengkap, Email, dan Password).
-- Dilengkapi dengan sistem **Validasi Real-time** (`onUserInteraction`), yang akan menampilkan pesan *error* otomatis (seperti format email tidak sah, panjang minimal karakter, hingga kombinasi huruf dan angka untuk proteksi *password*).
-
-### 5. Deteksi Orientasi Layar (Tugas No. 6)
-- Diimplementasikan menggunakan `OrientationBuilder` untuk membuat UI yang sangat adaptif.
-- Berisi *Grid* ikon-ikon yang mana tampilannya akan berubah secara otomatis: **2 Kolom** saat layar berbentuk *Portrait* (berdiri), dan menjadi **4 Kolom** secara proporsional ketika layar dirotasi menjadi *Landscape* (mendatar).
-
-### 6. Popup Menu (Tugas No. 7 / Bonus)
-- Terletak pada halaman terpisah untuk demonstrasi *Pop-up*.
-- Menggunakan `PopupMenuButton` yang menampilkan 4 buah menu interaktif (Profil, Pengaturan, Bagikan, dan Keluar).
-- Tombol terhubung pada fungsi yang nyata, seperti navigasi ke halaman terpisah, memunculkan *Bottom Sheet* untuk berbagi tautan, serta dialog konfirmasi untuk keluar dari halaman.
+## 👨‍💻 Informasi Mahasiswa
+| Identitas | Keterangan |
+| :--- | :--- |
+| **Nama** | Aditya |
+| **NIM** | L200230185 |
+| **Program Studi** | Informatika |
 
 ---
 
-## 🛠️ Prasyarat (Environment)
-- [Flutter SDK](https://flutter.dev/docs/get-started/install) ter-install dengan *channel stable*.
-- Android Emulator atau *physical device* yang terhubung.
+## 🎯 Objektif & Kriteria Penyelesaian Tugas
 
-## ▶️ Panduan Menjalankan
+Aplikasi ini dibangun menggunakan arsitektur UI yang seragam dan elegan. Setiap poin tugas yang diwajibkan telah diimplementasikan ke dalam modul halaman terpisah sebagai berikut:
 
-Ikuti panduan berikut untuk menjalankan program secara mandiri di komputer Anda:
+### 1. Modul AppBar (Tugas No. 2)
+Mengimplementasikan komponen `AppBar` lengkap yang memenuhi kriteria struktur standar:
+- Mengandung `Leading` berupa navigasi *Sidebar* (*Drawer*).
+- Memiliki `Title` utama aplikasi.
+- Memiliki setidaknya 2 `Actions`, yaitu *Icon Button* untuk Pencarian (*Search Delegate*) dan Notifikasi (*Dialog Alert*).
 
-```bash
-# 1. Clone repository
-git clone https://github.com/Aditya150417/l200230185_widgets.git
+### 2. Modul BoxDecoration (Tugas No. 3)
+Eksplorasi mendalam terhadap gaya kontainer (*Container Styling*):
+- Implementasi `borderRadius` untuk sudut seragam maupun spesifik (menggunakan properti `.only()`).
+- Implementasi sistem `boxShadow` dengan kombinasi *blur radius*, *spread*, dan modifikasi *offset*.
+- Implementasi pewarnaan modern menggunakan transisi warna `LinearGradient`.
 
-# 2. Masuk ke direktori
-cd l200230185_widgets
+### 3. Modul RichText (Tugas No. 4)
+Mendemonstrasikan fleksibilitas tipografi pada satu baris tata letak:
+- Menggabungkan minimal 3 jenis *style* yang berbeda dalam kalimat tunggal.
+- Komposisi *styling* mencakup *Font Weight* (Bold/Normal), *Font Style* (Italic), perbedaan ukuran *font*, efek coretan (*Strikethrough*), efek bergaris bawah (*Underline*), warna *Highlight*, hingga pengaturan *Shadow*.
 
-# 3. Instal semua paket/dependensi
-flutter pub get
+### 4. Modul Form & Validasi (Tugas No. 5)
+Implementasi pengumpulan data (*Data Input*) yang aman dan tervalidasi secara komprehensif:
+- Terdiri dari 3 *input field* utama: `Nama Lengkap`, `Email`, dan `Password`.
+- Diintegrasikan dengan `AutovalidateMode.onUserInteraction` untuk memberikan status *error feedback* secara langsung (*real-time*).
+- Mekanisme validasi mencakup pengecekan spasi (*null/empty*), limitasi minimal 8 karakter, *RegEx* ketat untuk format *Email*, serta keharusan penggunaan huruf kapital dan kombinasi angka pada kerahasiaan *Password*.
 
-# 4. Jalankan (Run) ke perangkat
-flutter run
-```
+### 5. Modul Deteksi Orientasi (Tugas No. 6)
+Penerapan arsitektur UI yang responsif dan mampu beradaptasi pada perubahan bentuk layar:
+- Mendeteksi keadaan *Portrait* maupun *Landscape* dengan *listener* dari `OrientationBuilder`.
+- Mengontrol kerangka `GridView` secara otomatis untuk merender **2 Kolom** ketika mendeteksi *Portrait*, dan meluas menjadi **4 Kolom** ketika diletakkan secara *Landscape*.
 
-*Semua kode pada proyek ini telah dibersihkan dari komentar sisa pengembangan demi menjaga standar kerapian kode.*
+### 6. Modul Popup Menu & Interaksi (Tugas No. 7 / Bonus)
+Implementasi interaksi menu kontekstual tingkat lanjut:
+- Terdiri dari widget `PopupMenuButton` fungsional dengan 4 aksi terpisah: *Profil*, *Pengaturan*, *Bagikan*, dan *Keluar*.
+- Penggunaan interaksi bawaan UI seperti pemanggilan native `showModalBottomSheet` untuk sistem *Share*.
+- Pemanggilan `showDialog` untuk aksi konfirmasi pencegahan keluar paksa (*Logout*).
+
+---
+
+## 🚀 Panduan Eksekusi Program
+
+Berikut langkah-langkah untuk melakukan kompilasi dan menjalankan aplikasi:
+
+1. **Kloning Repositori:**
+   ```bash
+   git clone https://github.com/Aditya150417/l200230185_widgets.git
+   cd l200230185_widgets
+   ```
+
+2. **Sinkronisasi Dependensi:**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Menjalankan Build:**
+   Jalankan perintah ini saat *physical device* Android atau *virtual emulator* sudah siap:
+   ```bash
+   flutter run
+   ```
+
+---
+> Proyek ini murni menggunakan kerangka kerja [Flutter](https://flutter.dev) dan dipublikasikan untuk keperluan dokumentasi tugas akademik.
